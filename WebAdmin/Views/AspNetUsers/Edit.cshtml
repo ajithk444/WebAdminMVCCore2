@@ -9,9 +9,9 @@
 <h4>AspNetUser</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <form asp-action="Edit">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="col-md-4">
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <label asp-for="AccessFailedCount" class="control-label"></label>
@@ -62,11 +62,12 @@
                 <input asp-for="NormalizedUserName" class="form-control" />
                 <span asp-validation-for="NormalizedUserName" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            @*<div class="form-group">
                 <label asp-for="PasswordHash" class="control-label"></label>
                 <input asp-for="PasswordHash" class="form-control" />
                 <span asp-validation-for="PasswordHash" class="text-danger"></span>
-            </div>
+            </div>*@
+            <input asp-for="PasswordHash" type="hidden" />
             <div class="form-group">
                 <label asp-for="PhoneNumber" class="control-label"></label>
                 <input asp-for="PhoneNumber" class="form-control" />
@@ -84,6 +85,8 @@
                 <input asp-for="SecurityStamp" class="form-control" />
                 <span asp-validation-for="SecurityStamp" class="text-danger"></span>
             </div>
+        </div>
+        <div class="col-md-4">
             <div class="form-group">
                 <div class="checkbox">
                     <label>
@@ -97,11 +100,11 @@
                 <span asp-validation-for="UserName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Save" class="btn btn-success" />
             </div>
-        </form>
+        </div>
+    </form>
     </div>
-</div>
 
 <div>
     <a asp-action="Index">Back to List</a>
