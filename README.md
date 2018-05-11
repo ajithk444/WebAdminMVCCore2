@@ -4,3 +4,4 @@ Administration for users and roles for individual authentication in ASP.net MVC 
 
 https://github.com/Mark-Phillipson/WebAdminMVCCore2/wiki
   
+For more information and instructions please see the wiki:
